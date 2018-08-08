@@ -4,5 +4,7 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 }, #emailはカラは許さず、長さは255文字以内
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                     uniqueness: { case_sensitive: false } #重複を許さない。case_sensitiveで大文字と小文字を区別しない
-  has_secure_password #password_digestカラムを用意し、モデルファイルにhas_secure_passwordを記述する。
+  has_secure_password #password_digestカラムを用意し、モデルファイルにhas_secure_passwordを記述する
+  
+  has_many :microposts
 end
