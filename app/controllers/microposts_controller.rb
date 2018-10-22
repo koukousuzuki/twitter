@@ -12,7 +12,7 @@ class MicropostsController < ApplicationController
       flash.now[:danger] = 'メッセージの投稿に失敗しました。'
       render 'toppages/index'
     end
-  end 
+  end
 
   def destroy
     @micropost.destroy

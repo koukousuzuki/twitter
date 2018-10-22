@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     member do #フォロー中のユーザとフォローされているユーザ一覧を表示する
       get :followings
       get :followers
+
     end
   end
   resources :microposts, only:[:create, :destroy]
